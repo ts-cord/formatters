@@ -1,0 +1,6 @@
+# Node
+node_modules/
+package-lock.json
+
+# Lib tests
+index.test.ts
