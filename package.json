@@ -9,7 +9,7 @@
     "lint:fix": "eslint src --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "escoteiros",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.60.1",
@@ -17,5 +17,13 @@
     "eslint": "^8.43.0",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ts-cord/formatters.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ts-cord/formatters/issues"
+  },
+  "homepage": "https://github.com/ts-cord/formatters#readme"
 }
