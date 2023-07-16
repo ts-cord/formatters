@@ -86,8 +86,8 @@ export function hideLinkEmbed<C extends string>(url: C): `<${C}>` {
  * @returns {`[${C}](${U})`} - The formatted content.
  * @since 0.0.1
  */
-export function hyperlink<C extends string, U extends string>(content: C, url: U): `[${C}](${U})` {
-    return `[${content}](${url})`;
+export function hyperlink<C extends string, U extends string, T extends string | undefined = undefined>(content: C, url: U, title?: T): T extends string ? `[${C}](${U} "${T}")` : `[${C}](${U})` {
+    return `[${content}](${url}${title ? ' "' + title + '"' : ''})` as T extends string ? `[${C}](${U} "${T}")` : `[${C}](${U})`;
 }
 
 /**
