@@ -1,65 +1,65 @@
-import { Snowflake } from '../types';
+import { Snowflake } from '../types/index';
 
-export const blockQuote = <C extends string>(content: C): `>>> ${C}` => {
+export function blockQuote<C extends string>(content: C): `>>> ${C}` {
     return `>>> ${content}`;
-};
+}
 
-export const bold = <C extends string>(content: C): `**${C}**` => {
+export function bold<C extends string>(content: C): `**${C}**` {
     return `**${content}**`;
-};
+}
 
-export const channelURL = <C extends Snowflake>(channelId: C): `https://discord.com/channels/@me/${C}` => {
+export function channelURL<C extends Snowflake>(channelId: C): `https://discord.com/channels/@me/${C}` {
     return `https://discord.com/channels/@me/${channelId}`;
-};
+}
 
-export const channelMention = <C extends Snowflake>(channelId: C): `<#${C}>` => {
+export function channelMention<C extends Snowflake>(channelId: C): `<#${C}>` {
     return `<#${channelId}>`;
-};
+}
 
-export const codeBlock = <C extends string>(content: C): `\`\`\`\n${C}\n\`\`\`` => {
+export function codeBlock<C extends string>(content: C): `\`\`\`\n${C}\n\`\`\`` {
     return `\`\`\`\n${content}\n\`\`\``;
-};
+}
 
-export const formatEmoji = <C extends Snowflake, A extends boolean = false>(emojiId: C, animated?: A): A extends true ? `<a:_:${C}>` : `<:_:${C}>` => {
+export function formatEmoji<C extends Snowflake, A extends boolean = false>(emojiId: C, animated?: A): A extends true ? `<a:_:${C}>` : `<:_:${C}>` {
     return (animated ? `<a:_:${emojiId}` : `<:_:${emojiId}>`) as A extends true ? `<a:_:${C}>` : `<:_:${C}>`;
-};
+}
 
-export const hideLinkEmbed = <C extends string>(url: C): `<${C}>` => {
+export function hideLinkEmbed<C extends string>(url: C): `<${C}>` {
     return `<${url}>`;
-};
+}
 
-export const hyperlink = <C extends string, U extends string>(content: C, url: U): `[${C}](${U})` => {
+export function hyperlink<C extends string, U extends string>(content: C, url: U): `[${C}](${U})` {
     return `[${content}](${url})`;
-};
+}
 
-export const inlineCode = <C extends string>(content: C): `\`${C}\`` => {
+export function inlineCode<C extends string>(content: C): `\`${C}\`` {
     return `\`${content}\``;
-};
+}
 
-export const italic = <C extends string>(content: C): `_${C}_` => {
+export function italic<C extends string>(content: C): `_${C}_` {
     return `_${content}_`;
-};
+}
 
-export const quote = <C extends string>(content: C): `> ${C}` => {
+export function quote<C extends string>(content: C): `> ${C}` {
     return `> ${content}`;
-};
+}
 
-export const roleMention = <I extends Snowflake>(roleId: I): `<@&${I}>` => {
+export function roleMention<I extends Snowflake>(roleId: I): `<@&${I}>` {
     return `<@&${roleId}>`;
-};
+}
 
-export const userMention = <I extends Snowflake>(userId: I): `<@${I}>` => {
+export function userMention<I extends Snowflake>(userId: I): `<@${I}>` {
     return `<@${userId}>`;
-};
+}
 
-export const spoiler = <C extends string>(content: C): `||${C}||` => {
+export function spoiler<C extends string>(content: C): `||${C}||` {
     return `||${content}||`;
-};
+}
 
-export const strikethrough = <C extends string>(content: C): `~~${C}~~` => {
+export function strikethrough<C extends string>(content: C): `~~${C}~~` {
     return `~~${content}~~`;
-};
+}
 
-export const underscore = <C extends string>(content: C): `__${C}__` => {
+export function underscore<C extends string>(content: C): `__${C}__` {
     return `__${content}__`;
-};
+}
