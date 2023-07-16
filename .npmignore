@@ -1,5 +1,6 @@
 # Lib tests
 index.test.test
 
-# Lint
+# Package stuffs
+tscord-logo.jpg
 .eslint*
