@@ -8,7 +8,12 @@
     "test": "tsx index.test.ts",
     "lint:fix": "eslint src --fix"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "formatters",
+    "discord"
+  ],
   "author": "escoteiros",
   "license": "ISC",
   "devDependencies": {
@@ -25,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/ts-cord/formatters/issues"
   },
-  "homepage": "https://github.com/ts-cord/formatters#readme"
+  "homepage": "https://github.com/ts-cord/formatters#readme",
+  "typings": "src/declarations.d.ts"
 }
