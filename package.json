@@ -1,6 +1,6 @@
 {
   "name": "@ts-cord/formatters",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A set of string formatting for Discord",
   "main": "index.ts",
   "scripts": {
