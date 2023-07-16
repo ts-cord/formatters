@@ -16,8 +16,8 @@ export function channelMention<C extends Snowflake>(channelId: C): `<#${C}>` {
     return `<#${channelId}>`;
 }
 
-export function codeBlock<C extends string>(content: C): `\`\`\`\n${C}\n\`\`\`` {
-    return `\`\`\`\n${content}\n\`\`\``;
+export function codeBlock<C extends string, L extends string>(content: C, language?: L): L extends string ? `\`\`\`${L}\n${C}\n\`\`\`` : `\`\`\`\n${C}\n\`\`\`` {
+    return (language ? `\`\`\`${language}\n${content}\n\`\`\`` : `\`\`\`\n${content}\n\`\`\``) as L extends string ? `\`\`\`${L}\n${C}\n\`\`\`` : `\`\`\`\n${C}\n\`\`\``;
 }
 
 export function formatEmoji<C extends Snowflake, A extends boolean = false>(emojiId: C, animated?: A): A extends true ? `<a:_:${C}>` : `<:_:${C}>` {

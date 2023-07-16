@@ -24,7 +24,7 @@ export function blockQuote<C extends string>(content: C): `>>> ${C}`;
 export function bold<C extends string>(content: C): `**${C}**`;
 export function channelURL<C extends Snowflake>(channelId: C): `https://discord.com/channels/@me/${C}`;
 export function channelMention<C extends Snowflake>(channelId: C): `<#${C}>`;
-export function codeBlock<C extends string>(content: C): `\`\`\`\n${C}\n\`\`\``;
+export function codeBlock<C extends string, L extends string>(content: C, language?: L): L extends string ? `\`\`\`${L}\n${C}\n\`\`\`` : `\`\`\`\n${C}\n\`\`\``
 export function formatEmoji<C extends Snowflake, A extends boolean = false>(emojiId: C, animated?: A): A extends true ? `<a:_:${C}>` : `<:_:${C}>`;
 export function hideLinkEmbed<C extends string>(url: C): `<${C}>`;
 export function hyperlink<C extends string, U extends string>(content: C, url: U): `[${C}](${U})`;
