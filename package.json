@@ -1,7 +1,7 @@
 {
-  "name": "base",
-  "version": "1.0.0",
-  "description": "Base for all TypeScript projects",
+  "name": "@ts-cord/formatters",
+  "version": "0.0.1",
+  "description": "A set of string formatting for Discord",
   "main": "index.ts",
   "scripts": {
     "dev": "tsx src/index.ts",
